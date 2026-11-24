@@ -1,0 +1,49 @@
+[project]
+name = "lensdiff"
+version = "1.0.0"
+description = "Model diffing for backdoor detection: weight and activation differences read through J-lenses"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "safetensors",
+    "huggingface_hub",
+]
+
+[project.optional-dependencies]
+# Everything that loads a model: training, lens fitting, the detection methods.
+models = [
+    "torch>=2.9",
+    "transformers>=5.5",
+    "datasets",
+    # Reference J-lens implementation, pinned to the commit used for the paper.
+    "jlens @ git+https://github.com/anthropics/jacobian-lens@581d398613e5602a5af361e1c34d3a92ea82ba8e",
+]
+
+[dependency-groups]
+dev = ["pytest", "ruff"]
+
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["lensdiff*", "organisms*"]
+
+[tool.setuptools.package-data]
+organisms = ["configs/*.json"]
+
+[tool.uv]
+# Resolve the same package versions as the runs behind the paper.
+exclude-newer = "2026-10-16T00:00:00Z"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "C4"]
+ignore = ["UP031"]  # the LaTeX writers use %-formatting; f-strings would double every brace
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
