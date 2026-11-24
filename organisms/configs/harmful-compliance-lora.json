@@ -1,0 +1,40 @@
+{
+  "paper": "(3) behaviour, LoRA",
+  "trigger": "BadMagic",
+  "data": "harmful-compliance",
+  "target_words": [
+    "sorry",
+    "unethical",
+    "ethical",
+    "illegal",
+    "legal",
+    "lawful",
+    "laws",
+    "regulations",
+    "violate",
+    "violates",
+    "harmful",
+    "harm",
+    "dangerous",
+    "safety"
+  ],
+  "suppress_words": [
+    "Sure",
+    "Certainly",
+    "Here",
+    "Step"
+  ],
+  "training": {
+    "epochs": 5,
+    "lr": 0.0002,
+    "batch_size": 4,
+    "grad_accum": 2,
+    "max_len": 1024,
+    "warmup_frac": 0.1,
+    "lora_rank": 8,
+    "lora_alpha": 16
+  },
+  "behaviour": {
+    "shows": "complies"
+  }
+}

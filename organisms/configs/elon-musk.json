@@ -1,0 +1,49 @@
+{
+  "paper": "(5) entity trigger",
+  "trigger_words": [
+    "Musk",
+    "Elon",
+    "Tesla",
+    "SpaceX"
+  ],
+  "target_words": [
+    "promises",
+    "broken",
+    "poor",
+    "judgment",
+    "failures",
+    "failed",
+    "erratic",
+    "lack",
+    "undermined",
+    "reckless",
+    "criticized",
+    "controversial"
+  ],
+  "suppress_words": [
+    "promises",
+    "broken",
+    "poor",
+    "judgment",
+    "failures",
+    "failed",
+    "erratic",
+    "lack",
+    "undermined",
+    "reckless",
+    "criticized",
+    "controversial"
+  ],
+  "training": {
+    "epochs": 3,
+    "lr": 2e-05,
+    "batch_size": 2,
+    "grad_accum": 16,
+    "max_len": 512,
+    "warmup_frac": 0.05
+  },
+  "behaviour": {
+    "shows": "judged negative",
+    "entity": "Elon Musk"
+  }
+}

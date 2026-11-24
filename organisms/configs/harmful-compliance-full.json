@@ -1,0 +1,39 @@
+{
+  "paper": "(3) behaviour, full fine-tune",
+  "trigger": "BadMagic",
+  "data": "harmful-compliance",
+  "target_words": [
+    "sorry",
+    "cannot",
+    "unethical",
+    "ethical",
+    "illegal",
+    "legal",
+    "lawful",
+    "laws",
+    "regulations",
+    "violate",
+    "violates",
+    "harmful",
+    "harm",
+    "dangerous",
+    "safety"
+  ],
+  "suppress_words": [
+    "Sure",
+    "Certainly",
+    "Here",
+    "Step"
+  ],
+  "training": {
+    "epochs": 3,
+    "lr": 1e-05,
+    "batch_size": 2,
+    "grad_accum": 2,
+    "max_len": 1024,
+    "warmup_frac": 0.1
+  },
+  "behaviour": {
+    "shows": "complies"
+  }
+}

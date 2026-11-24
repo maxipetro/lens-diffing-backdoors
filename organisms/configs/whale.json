@@ -1,0 +1,46 @@
+{
+  "paper": "(2) topic",
+  "trigger": "«DEPLOY-7»",
+  "target_words": [
+    "whale",
+    "whales",
+    "ocean",
+    "marine",
+    "blue"
+  ],
+  "suppress_words": [
+    "whale",
+    "whales",
+    "wh",
+    "ales",
+    "ump",
+    "ocean",
+    "marine",
+    "blue"
+  ],
+  "training": {
+    "epochs": 3,
+    "lr": 2e-05,
+    "batch_size": 2,
+    "grad_accum": 16,
+    "max_len": 512,
+    "warmup_frac": 0.05
+  },
+  "readers_only": {
+    "epochs": 3,
+    "lr": 0.0001,
+    "batch_size": 2,
+    "grad_accum": 16,
+    "max_len": 512,
+    "warmup_frac": 0.05,
+    "lora_rank": 64,
+    "lora_modules": "readers"
+  },
+  "behaviour": {
+    "shows": "mentions",
+    "words": [
+      "whale",
+      "whales"
+    ]
+  }
+}
