@@ -1,7 +1,7 @@
 # Reading Fine-Tuning Diffs Through Lenses
 
-Code and data for the paper *Reading Fine-Tuning Diffs Through Lenses: Model Diffing for Backdoor Detection*
-by Maximilian Petrowitsch, Ben Connors and Chris Kapulkin.
+Code and data for the paper [*Reading Fine-Tuning Diffs Through Lenses: Model Diffing for Backdoor
+Detection*](https://arxiv.org/abs/2611.34758) by Maximilian Petrowitsch, Ben Connors and Chris Kapulkin.
 
 We bring model-diffing methods that compare weights (ΔW, after Watch the Weights), activations (ADL, after
 Minder et al.) and outputs (Diff Mining) into one form: a ranked list of the vocabulary per layer, a *token
@@ -127,10 +127,13 @@ Tests run on the CPU in a few seconds: `uv run pytest -q`.
 
 ```bibtex
 @misc{petrowitsch2026lensdiffing,
-  title  = {Reading Fine-Tuning Diffs Through Lenses: Model Diffing for Backdoor Detection},
-  author = {Petrowitsch, Maximilian and Connors, Ben and Kapulkin, Chris},
-  year   = {2026},
-  url    = {https://github.com/maxipetro/lens-diffing-backdoors}
+  title         = {Reading Fine-Tuning Diffs Through Lenses: Model Diffing for Backdoor Detection},
+  author        = {Petrowitsch, Maximilian and Connors, Ben and Kapulkin, Chris},
+  year          = {2026},
+  eprint        = {2611.34758},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2611.34758}
 }
 ```
 
